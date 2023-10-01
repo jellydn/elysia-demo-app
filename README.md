@@ -39,6 +39,64 @@ This project serves as a practical guide to developing and deploying web applica
 bun run test
 ```
 
+## 🛡 End-to-End Type-Safety with Elysia and Eden
+
+[End-to-end type-safety](https://elysiajs.com/patterns/end-to-end-type-safety.html) is a robust approach that ensures type consistency across every component of your system. By leveraging this, you can catch type mismatches early in the development cycle, reducing runtime errors and ensuring predictable system behavior.
+
+### Benefits
+
+- Prevents bugs and errors due to type mismatches.
+- Reduces risk of unexpected behavior.
+- Enhances code readability and maintainability.
+
+### Eden Plugin for Elysia
+
+Elysia's Eden plugin is specifically designed to achieve end-to-end type safety between the client and the server.
+
+#### Installation
+
+To utilize Eden's capabilities, you need to install it on your frontend:
+
+```bash
+bun add elysia @elysiajs/eden
+```
+
+**TIP:** Eden requires Elysia for type inference. Install Elysia as a dev dependency.
+
+```typescript
+// server.ts
+import { Elysia, t } from "elysia";
+
+export type App = typeof app;
+```
+
+#### Client-Side Usage
+
+Once you've installed and configured Eden, you can consume the Elysia API on the client-side as follows:
+
+```typescript
+// client.ts
+import { edenTreaty } from "@elysiajs/eden";
+
+import type { App } from "./server";
+
+const client = edenTreaty<App>("http://localhost:8080");
+```
+
+### Method Chaining
+
+Elysia promotes the use of method chaining for better type inference and cleaner code.
+
+```typescript
+// Example
+const app = new Elysia()
+  .state("build", 1)
+  .get("/", ({ store: { build } }) => build)
+  .listen(3000);
+```
+
+With [method chaining](https://elysiajs.com/patterns/method-chaining.html), you maintain type safety throughout your code, ensuring that each method you chain is aware of the types introduced by the preceding methods.
+
 ## 🚀 Usage with Docker
 
 Before running the application with Docker, make sure you have [Docker](https://orbstack.dev) and [Docker Compose](https://docs.docker.com/compose/install/) installed.
