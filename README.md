@@ -38,7 +38,7 @@ Before running the application with Docker, make sure you have [Docker](https://
 docker build -t elysia-demo-app .
 ```
 
-### Running with Docker Compose and Traefik
+### Running with Docker Compose and [Traefik](https://github.com/traefik/traefik/)
 
 1. Create a network named `web` if you haven't already:
 
@@ -54,6 +54,96 @@ docker build -t elysia-demo-app .
 
 You should now be able to access the application at `http://your-service.local`.
 
+## 🚀 Deploying to [Fly.io](https://fly.io)
+
+### Deploy via Dockerfile
+
+If you have your project wrapped in a Docker container, deploying to Fly.io is straightforward.
+
+#### Initial Deployment
+
+Run the following command to initiate deployment:
+
+```bash
+fly launch
+```
+
+During this process, you'll be prompted to:
+
+- Choose an app name or leave it blank to generate one.
+- Select an organization.
+- Choose a region for deployment.
+
+The `fly.toml` configuration file will be generated automatically.
+
+#### Configuration
+
+Most Docker applications require some environment variables. You can add these in the `[env]` block in the `fly.toml` file:
+
+```toml
+[env]
+  MY_SPECIAL_ENV = "some_value"
+  MAX_PLAYER_COUNT = "15"
+```
+
+For sensitive data, use `flyctl` to set up secrets:
+
+```bash
+flyctl secrets set MY_SECRET=romance
+```
+
+To list existing secrets, use:
+
+```bash
+flyctl secrets list
+```
+
+#### Final Deployment
+
+If you didn't deploy your application during the initial setup, you can deploy it now:
+
+```bash
+fly deploy
+```
+
+If you prefer to build the Docker image locally, use:
+
+```bash
+fly deploy --local-only
+```
+
+#### Access Your App
+
+To open your deployed app in a browser, run:
+
+```bash
+fly apps open
+```
+
+### Taking it Further
+
+For applications that require persistent storage, consider:
+
+- [Persistent Volumes](https://fly.io/docs/flyctl/volumes/): For data that needs to persist across deployments.
+- [Fly Postgres Database](https://fly.io/docs/flyctl/pg/create/): Automates the creation of a `DATABASE_URL` environment variable when attached to your app.
+
+## Additional Resources
+
+- [Bun 1.0 Release Blog](https://bun.sh/blog/bun-v1.0)
+- [Elysia - Fast, and friendly Bun web framework | ElysiaJS](https://elysiajs.com/)
+
+## Author
+
+👤 **Huynh Duc Dung**
+
+- Website: https://productsway.com/
+- Twitter: [@jellydn](https://twitter.com/jellydn)
+- Github: [@jellydn](https://github.com/jellydn)
+
 ## Show your support
 
-Give a ⭐️ if this project helped you!
+If this guide has been helpful, please give it a ⭐️.
+
+[![kofi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/dunghd)
+[![paypal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/dunghd)
+[![buymeacoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/dunghd)
