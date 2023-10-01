@@ -6,6 +6,8 @@
 
 This project serves as a practical guide to developing and deploying web applications using Bun, a modern JavaScript runtime, along with containerization through Docker and deployment via Fly.io. Whether you're a developer looking to adopt these technologies or an engineer focusing on DevOps practices, this demo offers an end-to-end example to kickstart your journey.
 
+[![IT Man - From Dev to Deployment: Learning Bun, Docker, and Fly.io with Elysia Demo App [Vietnamese]](https://i.ytimg.com/vi/kTekCcMlleU/hqdefault.jpg)](https://www.youtube.com/watch?v=kTekCcMlleU)
+
 ## Prerequisites
 
 - [Bun](https://bun.sh/) installed on your system.
