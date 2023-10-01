@@ -1,15 +1,25 @@
 {
   "name": "elysia-demo-app",
   "version": "1.0.50",
+  "module": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "format": "prettier --write .",
+    "lint": "eslint --ext .ts,.js src",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "elysia": "latest"
+    "elysia": "latest",
+    "pino": "^8.15.1"
   },
   "devDependencies": {
-    "bun-types": "latest"
-  },
-  "module": "src/index.js"
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "bun-types": "latest",
+    "eslint": "^8.50.0",
+    "eslint-config-productsway": "^1.3.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  }
 }
