@@ -11,7 +11,7 @@ This project serves as a practical guide to developing and deploying web applica
 - [Bun](https://bun.sh/) installed on your system.
 - [antfu/ni](https://github.com/antfu/ni) 💡 Use the right package manager.
 
-## Getting Started
+## Usage
 
 1. **Clone the Repository**
 
@@ -25,11 +25,19 @@ This project serves as a practical guide to developing and deploying web applica
    bun install
    ```
 
-3. **Run Tests Locally**
+3. **Run Dev Locally**
    ```bash
    bun run dev
-   bun run test
    ```
+   Open http://localhost:3000/ with your browser to see the result.
+
+## Test
+
+**Run Dev Locally**
+
+```bash
+bun run test
+```
 
 ## 🚀 Usage with Docker
 

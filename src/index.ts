@@ -43,6 +43,9 @@ app.post("/sign-in", ({ body }) => signIn(body), {
     username: t.String(),
     password: t.String(),
   }),
+  detail: {
+    tags: ["Auth"],
+  },
 });
 
 const port = process.env.PORT ?? 3000;

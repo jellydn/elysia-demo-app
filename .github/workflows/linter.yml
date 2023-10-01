@@ -1,0 +1,50 @@
+name: Linter & Typecheck
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - id: checkout
+        name: Checkout
+        uses: actions/checkout@v4
+      - id: setup-bun
+        name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - id: install-bun
+        name: Bun Install
+        run: |
+          bun install
+      - id: Typecheck
+        name: Checking Typescript Error
+        run: |
+          bun run typecheck
+  linter:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - id: checkout
+        name: Checkout
+        uses: actions/checkout@v4
+      - id: setup-bun
+        name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - id: install-bun
+        name: Bun Install
+        run: |
+          bun install
+      - id: linter
+        name: Linter check
+        run: |
+          bun run lint
