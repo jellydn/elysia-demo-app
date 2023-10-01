@@ -13,7 +13,7 @@ services:
       - "3000"
 
   traefik:
-    image: "traefik:v2.5"
+    image: "traefik:2.10"
     command:
       - "--api.insecure=true"
       - "--providers.docker=true"
