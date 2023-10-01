@@ -9,6 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@elysiajs/swagger": "^0.7.3",
     "elysia": "latest",
     "pino": "^8.15.1"
   },
