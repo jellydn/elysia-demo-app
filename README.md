@@ -33,7 +33,7 @@ This project serves as a practical guide to developing and deploying web applica
 
 ## Test
 
-**Run Dev Locally**
+**Run Test Locally**
 
 ```bash
 bun run test

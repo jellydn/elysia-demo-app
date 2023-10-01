@@ -1,6 +1,7 @@
 import { Elysia, t } from "elysia";
 
 import { cors } from "@elysiajs/cors";
+import { staticPlugin } from "@elysiajs/static";
 import swagger from "@elysiajs/swagger";
 
 import logger from "./logger";
@@ -8,6 +9,7 @@ import { SignInDTO, UserTokenDTO, signIn } from "./signIn";
 
 const port = process.env.PORT ?? 3000;
 const app = new Elysia()
+  .use(staticPlugin())
   .use(
     swagger({
       documentation: {
@@ -24,7 +26,7 @@ const app = new Elysia()
     }),
   )
   .use(cors())
-  .get("/", () => "Hello Elysia", {
+  .get("/hello", () => "Hello Elysia", {
     response: t.String({
       description: "Returns a string",
     }),
