@@ -1,4 +1,4 @@
-import { Elysia } from "elysia";
+import { Elysia, t } from "elysia";
 
 import swagger from "@elysiajs/swagger";
 
@@ -22,6 +22,24 @@ app.get("/", () => "Hello Elysia", {
   detail: {
     tags: ["App"],
   },
+});
+
+const signIn = (body: { username: string; password: string }) => {
+  logger.info(`🦊 ${body.username} is signed in`);
+  if (body.username === "admin" && body.password === "admin") {
+    return {
+      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+    };
+  }
+
+  throw new Error("Invalid username or password");
+};
+
+app.post("/sign-in", ({ body }) => signIn(body), {
+  body: t.Object({
+    username: t.String(),
+    password: t.String(),
+  }),
 });
 
 const port = process.env.PORT ?? 3000;
