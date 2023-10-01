@@ -5,7 +5,7 @@ import swagger from "@elysiajs/swagger";
 
 import logger from "./logger";
 
-const app = new Elysia();
+export const app = new Elysia();
 
 app.use(
   swagger({

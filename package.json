@@ -6,7 +6,7 @@
     "dev": "bun run --watch src/index.ts",
     "format": "prettier --write .",
     "lint": "eslint --ext .ts,.js src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "bun test"
   },
   "dependencies": {
     "@elysiajs/cors": "^0.7.1",
