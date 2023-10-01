@@ -5,9 +5,13 @@
   "scripts": {
     "dev": "bun run --watch server/index.ts",
     "format": "prettier --write .",
-    "lint": "eslint --ext .ts,.js server",
+    "lint": "bun run lint:web && bun run lint:server",
+    "lint:server": "eslint --ext .ts,.js server",
+    "lint:web": "eslint --ext .ts,.js web",
     "test": "bun test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "bun run typecheck:web && bun run typecheck:server",
+    "typecheck:server": "tsc --noEmit --project server/tsconfig.server.json",
+    "typecheck:web": "tsc --noEmit --project web/tsconfig.json"
   },
   "dependencies": {
     "@elysiajs/cors": "0.7.1",
