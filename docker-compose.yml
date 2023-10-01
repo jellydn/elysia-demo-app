@@ -5,8 +5,8 @@ services:
     build: .
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.your-service.rule=Host(`your-service.local`)"
-      - "traefik.http.services.your-service.loadbalancer.server.port=3000"
+      - "traefik.http.routers.elysia-demo-app.rule=Host(`elysia-demo-app.local`)"
+      - "traefik.http.services.elysia-demo-app.loadbalancer.server.port=3000"
     networks:
       - web
     expose:

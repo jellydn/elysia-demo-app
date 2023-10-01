@@ -55,7 +55,13 @@ docker build -t elysia-demo-app .
    docker-compose up
    ```
 
-You should now be able to access the application at `http://your-service.local`.
+You should now be able to access the application at `http://elysia-demo-app.local`.
+
+Make sure you have added the following to your `/etc/hosts` file.
+
+```
+127.0.0.1 	elysia-demo-app.local
+```
 
 ## 🚀 Deploying to [Fly.io](https://fly.io)
 
