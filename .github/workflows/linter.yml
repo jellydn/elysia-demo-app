@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
       - id: checkout
         name: Checkout
         uses: actions/checkout@v4
@@ -32,6 +34,8 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
       - id: checkout
         name: Checkout
         uses: actions/checkout@v4
