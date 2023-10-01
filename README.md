@@ -1,19 +1,34 @@
-# Elysia with Bun runtime
+<h1 align="center">Welcome to elysia-demo-app 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.50-blue.svg?cacheSeconds=2592000" />
+</p>
 
-## Getting Started
+## 🚀 Usage with Docker
 
-To get started with this template, simply paste this command into your terminal:
+Before running the application with Docker, make sure you have [Docker](https://orbstack.dev) and [Docker Compose](https://docs.docker.com/compose/install/) installed.
 
-```bash
-bun create elysia ./elysia-example
-```
-
-## Development
-
-To start the development server run:
+### Building the Docker image
 
 ```bash
-bun run dev
+docker build -t elysia-demo-app .
 ```
 
-Open http://localhost:3000/ with your browser to see the result.
+### Running with Docker Compose and Traefik
+
+1. Create a network named `web` if you haven't already:
+
+   ```bash
+   docker network create web
+   ```
+
+2. Start the services:
+
+   ```bash
+   docker-compose up
+   ```
+
+You should now be able to access the application at `http://your-service.local`.
+
+## Show your support
+
+Give a ⭐️ if this project helped you!

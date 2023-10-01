@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  elysia-app:
+    build: .
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.your-service.rule=Host(`your-service.local`)"
+      - "traefik.http.services.your-service.loadbalancer.server.port=3000"
+    networks:
+      - web
+    expose:
+      - "3000"
+
+  traefik:
+    image: "traefik:v2.5"
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
