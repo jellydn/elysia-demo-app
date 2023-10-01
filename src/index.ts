@@ -1,5 +1,6 @@
 import { Elysia, t } from "elysia";
 
+import { cors } from "@elysiajs/cors";
 import swagger from "@elysiajs/swagger";
 
 import logger from "./logger";
@@ -17,6 +18,8 @@ app.use(
     },
   }),
 );
+
+app.use(cors());
 
 app.get("/", () => "Hello Elysia", {
   detail: {
