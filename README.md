@@ -143,6 +143,7 @@ For applications that require persistent storage, consider:
 
 - [Persistent Volumes](https://fly.io/docs/flyctl/volumes/): For data that needs to persist across deployments.
 - [Fly Postgres Database](https://fly.io/docs/flyctl/pg/create/): Automates the creation of a `DATABASE_URL` environment variable when attached to your app.
+- [GitHub CI Action: Auto Deploy to Fly.io](https://fly.io/docs/laravel/advanced-guides/github-actions/#github-ci-action-auto-deploy-to-fly-io)
 
 ## Additional Resources
 
