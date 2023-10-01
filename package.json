@@ -1,11 +1,11 @@
 {
   "name": "elysia-demo-app",
   "version": "1.0.50",
-  "module": "src/index.js",
+  "module": "server/index.js",
   "scripts": {
-    "dev": "bun run --watch src/index.ts",
+    "dev": "bun run --watch server/index.ts",
     "format": "prettier --write .",
-    "lint": "eslint --ext .ts,.js src",
+    "lint": "eslint --ext .ts,.js server",
     "test": "bun test",
     "typecheck": "tsc --noEmit"
   },

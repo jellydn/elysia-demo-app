@@ -7,11 +7,11 @@ COPY bun.lockb .
 
 RUN bun install --production
 
-COPY src src
+COPY server server
 COPY tsconfig.json .
 COPY public public
 
 ENV NODE_ENV production
-CMD ["bun", "src/index.ts"]
+CMD ["bun", "server/index.ts"]
 
 EXPOSE 3000
