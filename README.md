@@ -1,7 +1,10 @@
-<h1 align="center">Welcome to elysia-demo-app 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.50-blue.svg?cacheSeconds=2592000" />
-</p>
+# Elysia Demo App: A Real-World Example Using Bun, Docker, and Fly.io 🚀
+
+![Version](https://img.shields.io/badge/version-1.0.50-blue.svg?cacheSeconds=2592000)
+
+## Introduction
+
+This project serves as a practical guide to developing and deploying web applications using Bun, a modern JavaScript runtime, along with containerization through Docker and deployment via Fly.io. Whether you're a developer looking to adopt these technologies or an engineer focusing on DevOps practices, this demo offers an end-to-end example to kickstart your journey.
 
 ## Prerequisites
 
