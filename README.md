@@ -41,6 +41,10 @@ This project serves as a practical guide to developing and deploying web applica
 bun run test
 ```
 
+## Elysia In One Picture 📸
+
+![https://elysiajs.com/assets/feature-sheet.webp](https://elysiajs.com/assets/feature-sheet.webp)
+
 ## 🛡 End-to-End Type-Safety with Elysia and Eden
 
 [End-to-end type-safety](https://elysiajs.com/patterns/end-to-end-type-safety.html) is a robust approach that ensures type consistency across every component of your system. By leveraging this, you can catch type mismatches early in the development cycle, reducing runtime errors and ensuring predictable system behavior.
@@ -208,7 +212,8 @@ For applications that require persistent storage, consider:
 ## Additional Resources
 
 - [Bun 1.0 Release Blog](https://bun.sh/blog/bun-v1.0)
-- [Elysia - Fast, and friendly Bun web framework | ElysiaJS](https://elysiajs.com/)
+- [An Introduction to the Bun JavaScript Runtime](https://www.sitepoint.com/bun-javascript-runtime-introduction/)
+- [Elysia - Fast, and friendly Bun web framework](https://elysiajs.com/)
 
 ## Author
 
