@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "run-p -l dev:*",
     "dev:server": "bun run --watch server/index.ts",
+    "dev:inspect": "bun --inspect server/index.ts",
     "dev:web": "cd web && bun run dev",
     "format": "prettier --write .",
     "lint": "run-p lint:*",
