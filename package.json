@@ -25,7 +25,7 @@
     "pino": "8.16.1"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "2.5.0",
+    "@sveltejs/vite-plugin-svelte": "2.5.1",
     "@trivago/prettier-plugin-sort-imports": "4.2.1",
     "@tsconfig/svelte": "5.0.2",
     "@typescript-eslint/eslint-plugin": "6.10.0",
