@@ -22,7 +22,7 @@
     "@elysiajs/static": "0.7.1",
     "@elysiajs/swagger": "0.7.4",
     "elysia": "latest",
-    "pino": "8.16.2"
+    "pino": "8.17.1"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "3.0.1",
@@ -41,6 +41,6 @@
     "svelte-check": "3.6.2",
     "tslib": "2.6.2",
     "typescript": "5.3.3",
-    "vite": "5.0.8"
+    "vite": "5.0.9"
   }
 }
