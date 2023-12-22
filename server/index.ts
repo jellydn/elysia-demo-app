@@ -26,12 +26,23 @@ const app = new Elysia()
     }),
   )
   .use(cors())
+  .get("/", () => ({ status: "ok" }), {
+    response: t.Object({
+      status: t.String({
+        description: "Returns ok for health check",
+      }),
+    }),
+    detail: {
+      description: "The root endpoint",
+      tags: ["App"],
+    },
+  })
   .get("/hello", () => "Hello Elysia", {
     response: t.String({
       description: "Returns a string",
     }),
     detail: {
-      description: "The root endpoint",
+      description: "The hello endpoint",
       tags: ["App"],
     },
   })
