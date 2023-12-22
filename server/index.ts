@@ -33,7 +33,7 @@ const app = new Elysia()
       }),
     }),
     detail: {
-      description: "The root endpoint",
+      description: "The hello endpoint",
       tags: ["App"],
     },
   })
