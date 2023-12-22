@@ -4,7 +4,7 @@ import type { App } from "./index";
 import logger from "./logger";
 
 const port = process.env.PORT ?? 3000;
-const app = edenTreaty<App>("http://0.0.0.0:" + port);
+const app = edenTreaty<App>(`http://0.0.0.0:${port}`);
 
 const hello = await app.hello.get();
 
