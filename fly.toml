@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for elysia-app on 2023-10-01T12:06:55+08:00
+# fly.toml app configuration file generated for elysia-demo-app on 2023-12-22T21:10:32+08:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "elysia-app"
+app = "elysia-demo-app"
 primary_region = "sin"
 
 [build]
@@ -15,3 +15,8 @@ primary_region = "sin"
   auto_start_machines = true
   min_machines_running = 0
   processes = ["app"]
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 256
