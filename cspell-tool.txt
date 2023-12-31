@@ -2,6 +2,7 @@ elysia
 traefik
 typecheck
 elysiajs
+autoroutes
 pino
 trivago
 productsway
