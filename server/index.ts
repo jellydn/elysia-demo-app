@@ -1,4 +1,5 @@
 import { Elysia, t } from "elysia";
+import { autoroutes } from "elysia-autoroutes";
 
 import { cors } from "@elysiajs/cors";
 import { staticPlugin } from "@elysiajs/static";
@@ -26,6 +27,11 @@ const app = new Elysia()
     }),
   )
   .use(cors())
+  .use(
+    autoroutes({
+      routesDir: "./routes",
+    }),
+  )
   .get("/", () => ({ status: "ok" }), {
     response: t.Object({
       status: t.String({
