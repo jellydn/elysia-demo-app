@@ -41,6 +41,14 @@ This project serves as a practical guide to developing and deploying web applica
 bun run test
 ```
 
+## Pre-commit
+
+This project uses [pre-commit](https://pre-commit.com/) to enforce code quality. To install pre-commit hooks, run:
+
+```bash
+pre-commit install --hook-type pre-commit --hook-type pre-push
+```
+
 ## Elysia In One Picture 📸
 
 ![https://elysiajs.com/assets/feature-sheet.webp](https://elysiajs.com/assets/feature-sheet.webp)
