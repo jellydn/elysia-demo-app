@@ -1,13 +1,19 @@
 {
   "name": "web",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "dev": "vite",
+    "format": "prettier --write .",
     "preview": "vite preview",
-    "svelte-check": "bunx svelte-check",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "svelte-check": "bunx svelte-check"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "4.3.0",
+    "prettier": "3.2.5",
+    "prettier-plugin-svelte": "3.2.2"
   }
 }

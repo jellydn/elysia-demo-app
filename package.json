@@ -7,10 +7,10 @@
     "dev:server": "bun run --watch server/index.ts",
     "server:inspect": "bun --inspect server/index.ts",
     "dev:web": "cd web && bun run dev",
-    "format": "prettier --write .",
-    "lint": "run-p lint:*",
-    "lint:server": "eslint --ext .ts,.js server",
-    "lint:web": "eslint --ext .ts,.js web",
+    "postinstall": "cd web && bun install",
+    "format": "biome format .",
+    "lint": "biome lint .",
+    "check": "biome check --apply .",
     "test": "bun test",
     "typecheck": "run-p typecheck:*",
     "typecheck:server": "tsc --noEmit --project server/tsconfig.server.json",
@@ -23,26 +23,18 @@
     "@elysiajs/swagger": "1.0.3",
     "elysia": "latest",
     "elysia-autoroutes": "0.5.0",
-    "pino": "8.19.0"
+    "pino": "8.20.0"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "3.0.2",
-    "@trivago/prettier-plugin-sort-imports": "4.3.0",
-    "@tsconfig/svelte": "5.0.2",
-    "@typescript-eslint/eslint-plugin": "7.2.0",
-    "@typescript-eslint/parser": "7.2.0",
+    "@biomejs/biome": "1.6.4",
+    "@tsconfig/svelte": "5.0.4",
     "bun-types": "latest",
-    "eslint": "8.57.0",
-    "eslint-config-productsway": "1.3.1",
-    "eslint-plugin-svelte": "2.35.1",
     "npm-run-all2": "6.1.2",
-    "prettier": "3.2.5",
-    "prettier-plugin-svelte": "3.2.2",
     "superjson": "2.2.1",
     "svelte": "4.2.12",
-    "svelte-check": "3.6.7",
+    "svelte-check": "3.6.9",
     "tslib": "2.6.2",
-    "typescript": "5.4.2",
-    "vite": "5.1.7"
+    "typescript": "5.4.4",
+    "vite": "5.2.8"
   }
 }
