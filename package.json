@@ -17,10 +17,10 @@
     "typecheck:web": "tsc --noEmit --project web/tsconfig.json"
   },
   "dependencies": {
-    "@elysiajs/cors": "0.7.2",
-    "@elysiajs/eden": "0.7.7",
-    "@elysiajs/static": "0.7.1",
-    "@elysiajs/swagger": "1.0.5",
+    "@elysiajs/cors": "0.8.0",
+    "@elysiajs/eden": "0.8.1",
+    "@elysiajs/static": "0.8.1",
+    "@elysiajs/swagger": "1.1.0",
     "elysia": "latest",
     "elysia-autoroutes": "0.5.0",
     "pino": "9.3.1"
