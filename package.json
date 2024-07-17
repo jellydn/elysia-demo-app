@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@elysiajs/cors": "0.7.2",
-    "@elysiajs/eden": "0.7.7",
+    "@elysiajs/eden": "1.1.0",
     "@elysiajs/static": "0.7.1",
     "@elysiajs/swagger": "1.0.5",
     "elysia": "latest",
