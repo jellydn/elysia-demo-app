@@ -12,7 +12,7 @@
     "svelte-check": "bunx svelte-check"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "4.3.0",
+    "@trivago/prettier-plugin-sort-imports": "5.0.1",
     "prettier": "3.2.5",
     "prettier-plugin-svelte": "3.2.3"
   }
