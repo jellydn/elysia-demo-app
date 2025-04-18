@@ -17,24 +17,24 @@
     "typecheck:web": "tsc --noEmit --project web/tsconfig.json"
   },
   "dependencies": {
-    "@elysiajs/cors": "0.7.2",
-    "@elysiajs/eden": "0.7.7",
-    "@elysiajs/static": "0.7.1",
-    "@elysiajs/swagger": "1.0.5",
+    "@elysiajs/cors": "0.8.0",
+    "@elysiajs/eden": "0.8.1",
+    "@elysiajs/static": "0.8.1",
+    "@elysiajs/swagger": "1.2.2",
     "elysia": "latest",
     "elysia-autoroutes": "0.5.0",
-    "pino": "9.3.1"
+    "pino": "9.6.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "1.9.4",
     "@tsconfig/svelte": "5.0.4",
     "bun-types": "latest",
-    "npm-run-all2": "7.0.1",
-    "superjson": "2.2.1",
+    "npm-run-all2": "7.0.2",
+    "superjson": "2.2.2",
     "svelte": "next",
-    "svelte-check": "4.0.1",
-    "tslib": "2.6.3",
-    "typescript": "5.5.3",
-    "vite": "6.0.14"
+    "svelte-check": "4.1.6",
+    "tslib": "2.8.1",
+    "typescript": "5.8.3",
+    "vite": "6.3.2"
   }
 }
