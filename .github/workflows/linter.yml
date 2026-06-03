@@ -16,10 +16,10 @@ jobs:
         uses: styfle/cancel-workflow-action@0.12.0
       - id: checkout
         name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.3.1
       - id: setup-bun
         name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@v2.2.0
         with:
           bun-version: latest
       - id: install-bun
@@ -38,10 +38,10 @@ jobs:
         uses: styfle/cancel-workflow-action@0.12.0
       - id: checkout
         name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.3.1
       - id: setup-bun
         name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@v2.2.0
         with:
           bun-version: latest
       - id: install-bun
